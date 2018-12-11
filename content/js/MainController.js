@@ -1,61 +1,10 @@
 function MainController(){
-
-    this.likesList = [];
-    this.addToLikes = function(movie){
-        this.likesList.push(movie);
+    this.text = "Hello World"
+    this.myObject = {
+        one: "Key 1",
+        two: "Key 2"
     };
-
-    this.unlike = function(index){
-        this.likesList.splice(index, 1);
-    }
-
-    this.newTitle = "";
-    this.newRelease = "";
-    this.addMovie = function(){
-        this.favoriteMovies.unshift({
-            title: this.newTitle,
-            year: this.newRelease
-        });
-    }
-
-    this.onFocus = function(){
-        console.log("Focus!");
-    }
-
-    this.onBlur = function(){
-        console.log("Blur!");
-    }
-
-    this.onChange = function(){
-        console.log("Change!", this.newTitle);
-    }
-
-    this.name = 'Jake';
-    this.likes = ['pizza', 'coke'];
-    this.favoriteMovies = [{
-        title:"Shawshank Redemption",
-        year: "1994",
-        popular:true,
-        category: "thriller"
-    },
-    {
-        title:"Inception",
-        year: "2010",
-        popular:false,
-        category: "fantasy"
-    },
-    {
-        title:"The Matrix",
-        year: "1999",
-        popular:true,
-        category: "fantasy"
-    },
-    {
-        title:"Saving Private Ryan",
-        year: "1998",
-        popular:true,
-        category: "action"
-    }];
+    this.myArray = ['my', 'angular', 'app'];
 } 
 
 // Allows code to be minification safe. Maps these arguments to the arguments in the function above, so minified variables access intended objects.
