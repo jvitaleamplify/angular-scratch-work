@@ -1,4 +1,35 @@
 function MainController(){
+
+    this.likesList = [];
+    this.addToLikes = function(movie){
+        this.likesList.push(movie);
+    };
+
+    this.unlike = function(index){
+        this.likesList.splice(index, 1);
+    }
+
+    this.newTitle = "";
+    this.newRelease = "";
+    this.addMovie = function(){
+        this.favoriteMovies.unshift({
+            title: this.newTitle,
+            year: this.newRelease
+        });
+    }
+
+    this.onFocus = function(){
+        console.log("Focus!");
+    }
+
+    this.onBlur = function(){
+        console.log("Blur!");
+    }
+
+    this.onChange = function(){
+        console.log("Change!", this.newTitle);
+    }
+
     this.name = 'Jake';
     this.likes = ['pizza', 'coke'];
     this.favoriteMovies = [{
