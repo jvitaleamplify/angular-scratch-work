@@ -18,27 +18,22 @@
 <body>
 
     <div ng-controller="MainController as main">
-        <p>
-            {{main.myDate | date: 'hh:mm'}}
-        </p>
-        <p>
-            {{main.myAmount | currency:'$':2 }}
-        </p>
-        <input type="text" placeholder="Enter year" ng-model="search">
-        <a href="" ng-click="type = 'year'">Order by year</a>
-        <a href="" ng-click="type = 'title'">Order by title</a>
-        <ul>
-            <li ng-repeat="movie in main.movies | orderBy:type:false | filter: { year: search}">
-                <p>{{movie.title}}</p>
-                <p>{{movie.year}}</p>
-            </li>
-        </ul>
+        {{main.myAmount}}
+    </div>
 
-        <input type="text" ng-model="main.person.location">
-        <pre>{{ main.person | json }}</pre>
+    <div ng-controller="UserController as user">
+        <form ng-submit="user.getUser();">
+            <input type="text" ng-model="user.userId">
+            <button type="submit">
+                Search User
+            </button>
+        </form>
+        <pre>{{ user.chosenUser | json }}</pre>
     </div>
 
     <script src="js/app.js"></script>
     <script src="js/MainController.js"></script>
+    <script src="js/UserService.js"></script>
+    <script src="js/UserController.js"></script>
 </body>
 </html>
