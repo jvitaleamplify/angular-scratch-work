@@ -1,10 +1,25 @@
 function MainController(){
-    this.text = "Hello World"
-    this.myObject = {
-        one: "Key 1",
-        two: "Key 2"
-    };
-    this.myArray = ['my', 'angular', 'app'];
+    this.myDate = 1288323623006;
+    this.myAmount = 209.82;
+    this.movies = [
+        {
+            title:"movie A",
+            year:2010
+        },
+        {
+            title:"movie B",
+            year:1995
+        },
+        {
+            title:"movie C",
+            year:2000
+        }
+    ]
+
+    this.person = {
+        name:"Jake Vitale",
+        location:"Brooklyn"
+    }
 } 
 
 // Allows code to be minification safe. Maps these arguments to the arguments in the function above, so minified variables access intended objects.
