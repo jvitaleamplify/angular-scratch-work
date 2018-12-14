@@ -1,6 +1,18 @@
 function OrderController(){
-    this.name = "Coca Cola"
-    this.orderQuantity = 5;
+    this.customerOrder = {
+        name:'',
+        email:'',
+        location:'',
+        product:{
+            label:'',
+            id:'',
+        },
+        comments:''
+    };
+
+    this.submitOrder = function(){
+        console.log(this);
+    }
 }
 
 angular.module('app').controller('OrderController', OrderController);
