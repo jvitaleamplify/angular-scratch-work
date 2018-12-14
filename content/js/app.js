@@ -1,3 +1,5 @@
 //setter syntax
 //(nameOfApp, [dependencies])
-angular.module('app', [])
+angular.module('app', [
+    'ui.router'
+]);

@@ -6,47 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todd Motto Class</title>
     <script src="js/angular.js"></script>
+    <script src="js/angular-ui-router.js"></script>
     <style>
         body{font-size: 20px;}
-        .old {background:rgba(139, 59, 59, 0.671);}
-        .modern {background: rgba(63, 63, 133, 0.521);}
-        .new {background: rgba(55, 110, 55, 0.507);}
-        .likes{margin: 20px; padding: 30px; background: rgba(229, 226, 226, 0.774); border-radius: 5px; min-height: 100px;}
-        form{margin: 20px; padding: 30px; background: rgba(229, 226, 226, 0.774); border-radius: 5px; min-height: 100px;}
     </style>
 </head>
 <body>
-
-    <div ng-controller="MainController as main">
-        {{main.myAmount}}
-    </div>
-
-    <div ng-controller="UserController as user">
-        <form ng-submit="user.getUser();">
-            <input 
-            type="text" 
-            ng-model="user.userId"
-            stretch>
-            <button type="submit">
-                Search User
-            </button>
-        </form>
-        <pre>{{ user.chosenUser | json }}</pre>
-    </div>
-
-    <div ng-controller="OrderController as order">
-        <order-form data="order.customerOrder" submit="order.submitOrder();"></order-form>
-    </div>
+    <h1>My Angular App!</h1>
+    <nav>
+        <ul>
+            <li>
+                <a ui-sref="home">home</a>
+            </li>
+            <li>
+                    <a ui-sref="about">about</a>
+                </li>
+        </ul>
+    </nav>
+    <ui-view></ui-view>
 
     <script src="js/app.js"></script>
-    <script src="js/MainController.js"></script>
-    <script src="js/UserService.js"></script>
-    <script src="js/UserController.js"></script>
-    <script src="js/stretch.directive.js"></script>
-    <script src="js/CounterController.js"></script>
-    <script src="js/counter.directive.js"></script>
-    <script src="js/order-form.directive.js"></script>
-    <script src="js/OrderController.js"></script>
-    <script src="js/OrderFormController.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/HomeController.js"></script>
+    <script src="js/AboutController.js"></script>
 </body>
 </html>
